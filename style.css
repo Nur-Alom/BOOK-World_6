@@ -2,3 +2,7 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+
+.radius{
+    border-radius: 15px;
+}

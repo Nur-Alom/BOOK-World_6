@@ -11,11 +11,15 @@ const searchValue = () => {
     // console.log(url);
     fetch(url)
         .then(res => res.json())
-        .then(data => displaySearchResult(data))
+        .then(data => displaySearchResult(data.docs))
 };
 
 const displaySearchResult = (books) => {
-    console.log(books)
+    const searchResult = document.getElementById('search-result');
+    books.forEach(book => {
+        const div = document.createElement('div')
+        console.log(book);
+    })
 }
 
 
