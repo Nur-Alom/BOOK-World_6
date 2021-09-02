@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book World</title>
-    <!-- CC Style Sheet -->
+    <!-- CSS Style Sheet -->
     <link rel="stylesheet" href="style.css">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,15 +31,24 @@
 
     <!-- Display Search Data -->
     <section id="container" class="container my-5">
+        <!-- Spinner -->
+        <div id="spinner" class="text-center my-5 d-none">
+            <div class="spinner-border text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <!-- Display Data -->
         <div class="">
             <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
             </div>
         </div>
 
         <!-- Error handling -->
-        <div id="error" class="text-center fw-bold fs-3 text-danger">
+        <div id="error" class="text-center fw-bold fs-3 text-danger my-5">
         </div>
     </section>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

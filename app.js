@@ -1,22 +1,30 @@
 
-// console.log('Hello World');
-
+//  1. Get Data and JSON.
 const searchValue = () => {
     const searchInput = document.getElementById('input');
     const searchValue = searchInput.value;
-    // console.log(searchText);
     searchInput.value = '';
 
+    // Spinner Added.
+    const spinner = document.getElementById('spinner');
+    spinner.classList.remove('d-none');
+
+    // Get and Fetch Data.
     const url = `https://openlibrary.org/search.json?q=${searchValue}`;
-    // console.log(url);
     fetch(url)
         .then(res => res.json())
         .then(data => displaySearchResult(data.docs))
+        .finally(() =>
+            spinner.classList.add('d-none'));
 };
 
+
+//  2. Convert Data.
 const displaySearchResult = (books) => {
     const searchResult = document.getElementById('search-result');
     searchResult.textContent = '';
+
+    // Add Condition and Error handle.
     if (books.length === 0 || books.length === '') {
         document.getElementById('error').innerText = 'No Result Found!!';
     }
@@ -33,9 +41,8 @@ const displaySearchResult = (books) => {
         </div>
         `;
         searchResult.appendChild(div);
-        // console.log(book);
     })
-}
+};
 
 
 
