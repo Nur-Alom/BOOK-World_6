@@ -42,10 +42,10 @@ const displaySearchResult = (books) => {
         <div class="card h-100">
             <div class="card-body overflow-hidden">
                 <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top w-100">
-                <h3 class="text-warning mt-5">Book Name: ${book.title}</h3>
-                <h5>Author Name: ${book.author_name ? book.author_name.slice(0, 2) : 'Unknown Author'}</h5>
-                <p><strong class="text-success">First Publish Year: ${book.first_publish_year ? book.first_publish_year : 'Unknown'}</strong></p>
-                <p><b>Publisher:</b> ${book.publisher ? book.publisher : 'Unknown Publisher'}</p>
+                <h3 class="mt-5"><span class="text-warning">Book Name: </span>${book.title}</h3>
+                <h5><span class="text-warning">Author Name: </span>${book.author_name ? book.author_name.slice(0, 2) : 'Unknown Author'}</h5>
+                <p><b><span class="text-warning">First Publish Year: </span></b>${book.first_publish_year ? book.first_publish_year : 'Unknown'}</p>
+                <p><b><span class="text-warning">Publisher:</span></b> ${book.publisher ? book.publisher : 'Unknown Publisher'}</p>
             </div>
         </div>
         `;
