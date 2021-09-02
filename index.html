@@ -18,19 +18,24 @@
 </head>
 
 <body>
+    <!-- Page Title -->
     <h1 class="text-center mt-4 mb-3 fw-bold text-warning">Search Your Favorite Books!!</h1>
 
     <!-- Search Field -->
     <div class="input-group mb-3 mt-2 w-50 mx-auto">
         <input id="input" type="search" class="form-control" placeholder="Search For Your Favorite Book...">
-        <button onclick="searchValue()" class="btn btn-outline-secondary bg-info fw-bold" type="button"
+        <button onclick="searchValue()" class="btn btn-outline-dark border-0 bg-success fw-bold" type="button"
             id="button-addon2">Search</button>
     </div>
+
+    <!-- Total Found Data Count -->
+    <h5 id="total-data" class="fw-bold text-center"></h5>
 
     <hr class="w-75 mx-auto mt-5">
 
     <!-- Display Search Data -->
     <section id="container" class="container my-5">
+
         <!-- Spinner -->
         <div id="spinner" class="text-center my-5 d-none">
             <div class="spinner-border text-success" role="status">
@@ -48,7 +53,6 @@
         <div id="error" class="text-center fw-bold fs-3 text-danger my-5">
         </div>
     </section>
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
