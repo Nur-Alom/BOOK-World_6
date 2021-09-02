@@ -18,21 +18,26 @@
 </head>
 
 <body>
-    <h1 class="text-center mt-4 mb-3 fw-bold text-warning">Welcome to the Book World!!</h1>
+    <h1 class="text-center mt-4 mb-3 fw-bold text-warning">Search Your Favorite Books!!</h1>
+
     <!-- Search Field -->
     <div class="input-group mb-3 mt-2 w-50 mx-auto">
-        <input id="input" type="search" class="form-control" placeholder="Search For Your Book">
-        <button onclick="searchValue()" class="btn btn-outline-secondary" type="button"
+        <input id="input" type="search" class="form-control" placeholder="Search For Your Favorite Book...">
+        <button onclick="searchValue()" class="btn btn-outline-secondary bg-info fw-bold" type="button"
             id="button-addon2">Search</button>
     </div>
+
+    <hr class="w-75 mx-auto mt-5">
+
     <!-- Display Search Data -->
     <section id="container" class="container my-5">
-        <div id="seaech-result" class="row">
-            <div class="col-3 text-center bg-warning text-white p-3 radius">
-                <h2>hello</h2>
-                <h3>hello2</h3>
-                <p><strong>hello3</strong></p>
+        <div class="">
+            <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
             </div>
+        </div>
+
+        <!-- Error handling -->
+        <div id="error" class="text-center fw-bold fs-3 text-danger">
         </div>
     </section>
 
